@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Breathing Practice</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gray-100">
+    <header class="bg-blue-500 text-white p-4 text-center">
+      <h1 class="text-2xl font-bold mb-2">Box Breathing Practice</h1>
+      <div>
+        <span class="mr-4">Select Level:</span>
+        <select id="levelSelect" class="text-gray-700 px-2 py-1">
+          <option value="beginner">Beginner (4 seconds)</option>
+          <option value="intermediate">Intermediate (6 seconds)</option>
+          <option value="expert">Expert (8 seconds)</option>
+        </select>
+        <button id="startStop" class="bg-white text-blue-500 px-2 py-1 ml-4">Start</button>
+        <i class="fas fa-info-circle ml-2 cursor-pointer" title="Box breathing info" id="info"></i>
+      </div>
+    </header>
+
+    <main class="flex justify-center items-center min-h-screen">
+      <div id="breathingVisual" class="w-64 h-64 rounded-full border-8 border-blue-500 flex justify-center items-center text-blue-500 text-xl">
+        <span id="instruction">Click Start</span>
+      </div>
+    </main>
+
+    <div id="infoPopup" class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-4 rounded shadow w-80 hidden">
+      <h2 class="text-xl mb-2">Box Breathing Technique</h2>
+      <p>Inhale for X seconds, hold for X seconds, exhale for X seconds, hold for X seconds. Repeat for desired number of rounds.</p>
+      <div class="text-center mt-4">
+        <button id="closePopup" class="px-4 py-2 bg-blue-500 text-white rounded">Close</button>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

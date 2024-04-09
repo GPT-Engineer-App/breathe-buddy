@@ -1,0 +1,32 @@
+@keyframes grow {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes shrink {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(0.8);
+  }
+}
+
+.inhale {
+  animation: grow 4s linear forwards;
+}
+.hold1 {
+  animation: none;
+  transform: scale(1.2);
+}
+.exhale {
+  animation: shrink 4s linear forwards;
+}
+.hold2 {
+  animation: none;
+  transform: scale(0.8);
+}
